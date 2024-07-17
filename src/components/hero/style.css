@@ -1,0 +1,27 @@
+body{
+    background-color: #161618;
+}
+
+.hero{
+    height: calc(100vh - 10vh);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1220px;
+    color: #fff;
+}
+
+.small-text{
+    color: #00FF73;
+}
+
+.hero h1{
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 24px;
+}
+
+.hero p{
+    font-size: 1.5rem;
+}
