@@ -73,3 +73,37 @@
     background-color: transparent;
     color: #8946FF;
 }
+
+@media screen and (max-width: 768px){
+
+    .projects{
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .projects-container {
+        margin: 0 auto;
+        grid-template-columns: repeat(1, 1fr);
+        width: 80%;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .card-background{
+        background-color: #8946FF;
+        width: 100%;
+    }
+
+    .container-btn {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+    }
+
+    .projects a{
+        width: 100%;
+    }
+
+}

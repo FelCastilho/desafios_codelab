@@ -1,7 +1,7 @@
 import './style.css';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/logo-card.svg'
-export function Projects(){
+export default function Projects(){
     return(
         <section className="projects">
 

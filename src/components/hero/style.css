@@ -1,8 +1,8 @@
-body{
+body {
     background-color: #161618;
 }
 
-.hero{
+.hero {
     height: calc(100vh - 10vh);
     margin: 0 auto;
     display: flex;
@@ -12,16 +12,42 @@ body{
     color: #fff;
 }
 
-.small-text{
+.small-text {
     color: #00FF73;
 }
 
-.hero h1{
+.hero h1 {
     font-size: 3rem;
     margin-top: 1rem;
     margin-bottom: 24px;
 }
 
-.hero p{
+.hero p {
     font-size: 1.5rem;
+}
+
+@media screen and (max-width: 980px) {
+    .hero {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .hero img{
+        display: none;
+    }
+
+    .small-text {
+        color: #00FF73;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 24px;
+    }
+
+    .hero p {
+        font-size: 0.875rem;
+        line-height: 1.3rem;
+    }
 }
