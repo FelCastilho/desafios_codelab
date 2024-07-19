@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/codelab.svg';
 
 export function Header() {
-    const [isMenuActive, setIsMenuActive] = useState(false);
+    const [menuActive, setMenuActive] = useState(false);
 
-    const handleHamburgerClick = () => {
-        setIsMenuActive(!isMenuActive);
+    const toggleMenu = () => {
+        setMenuActive(!menuActive);
     };
 
     return (
@@ -16,11 +16,8 @@ export function Header() {
                 <div className="logo">
                     <img src={Logo} alt="Logo Codelab" />
                 </div>
-                <div
-                    className={`hamburguer ${isMenuActive ? 'active' : ''}`}
-                    onClick={handleHamburgerClick}
-                ></div>
-                <ul className={`menu ${isMenuActive ? 'active' : ''}`}>
+                <div className={`hamburguer ${menuActive ? 'active' : ''}`} onClick={toggleMenu}></div>
+                <ul className={`menu ${menuActive ? 'active' : ''}`}>
                     <li><Link to="#">Página inicial</Link></li>
                     <li><Link to="#">Sobre</Link></li>
                     <li><Link to="#" className='btn-community'>Entrar na comunidade</Link></li>

@@ -1,4 +1,4 @@
-header{
+header {
     background-color: #1C1C1F;
     color: #fff;
     height: 10vh;
@@ -7,116 +7,105 @@ header{
     border-bottom: 1px solid #34343A;
 }
 
-.navbar{
+.navbar {
     width: 1220px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}  
+}
 
-.menu{
+.menu {
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 3rem;
-    display: none;
+    display: none; /* Esconde o menu por padrão */
 }
 
-.navbar a{
-    text-decoration: none;  
+.navbar a {
+    text-decoration: none;
     color: #fff;
-    font-weight: 500;      
+    font-weight: 500;
 }
 
-.btn-community{
-    padding: 11px 39px 11px 39px;
+.btn-community {
+    padding: 11px 39px;
     background-color: #8946FF;
     border: 1px solid #8946FF;
     border-radius: 8px;
     transition: 0.2s all ease-in-out;
 }
 
-.btn-community:hover{
+.btn-community:hover {
     background-color: transparent;
     color: #8946FF;
 }
 
-.hamburguer{
+.hamburguer {
     width: 30px;
     height: 30px;
-
     background-color: transparent;
     border-radius: 5px;
     border: 0;
-
     position: relative;
-
     cursor: pointer;
     display: none;
-
 }
 
-.hamburguer:after{
+.hamburguer:after, .hamburguer:before {
     content: '';
-
     position: absolute;
+    left: 15%;
+    width: 70%;
+    height: 5%;
+    background-color: #fff;
+}
+
+.hamburguer:after {
     top: 35%;
-    left: 15%;
     border-radius: 20px;
-
-    width: 70%;
-    height: 5%;
-    background-color: #fff;
 }
 
-.hamburguer:before{
-    content: '';
-
-    position: absolute;
+.hamburguer:before {
     top: 55%;
-    left: 15%;
     border-radius: 5px;
-
-    width: 70%;
-    height: 5%;
-    background-color: #fff;
 }
 
-@media screen and (max-width: 980px){
-
-    header{
+@media screen and (max-width: 980px) {
+    header {
         height: 10vh;
     }
 
-    .navbar{
+    .navbar {
         width: 90%;
-    } 
+    }
 
-    .hamburguer{
+    .hamburguer {
         display: block;
         z-index: 999;
     }
 
-    .menu{
+    .menu {
         position: fixed;
         top: 0;
-
         right: 0;
-
         height: 100vh;
         margin: 0;
         background-color: #333;
         padding: 100px 20px;
-
         width: 100%;
         max-width: 100%;
-
         flex-direction: column;
-        transition: .5s ease;
+        transition: right 0.5s ease;
+        display: flex; /* Certifique-se de que o menu é visível */
     }
 
-    .menu.active{
+    .menu.active {
+        right: 0;
+    }
+
+    .menu:not(.active) {
         right: -100%;
     }
 }
